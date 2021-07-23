@@ -5,11 +5,11 @@ import express from 'express';
 
 import { APP_ENV, GIT_COMMIT_REFERENCE, SERVICE_SECRET } from './core/config';
 // import { logger, loggingMiddleware } from './core/logger';
-import { logger } from './core/logger';
+// import { logger } from './core/logger';
 import { apolloServer } from './graphql/apolloServer';
 import { healthcheckHandler } from './handlers';
 
-AWSXRay.setLogger(logger);
+// AWSXRay.setLogger(logger);
 AWSXRay.config([AWSXRay.plugins.ECSPlugin]);
 
 function buildApp() {
@@ -33,11 +33,11 @@ function buildApp() {
   apolloServer.applyMiddleware({ app, path: '/graphql' });
 
   // The error handler must be before any other error middleware and after all controllers
-  app.use(
-    Sentry.Handlers.errorHandler({
-      shouldHandleError: () => true,
-    }),
-  );
+  // app.use(
+  //   Sentry.Handlers.errorHandler({
+  //     shouldHandleError: () => true,
+  //   }),
+  // );
 
   // app.use(AWSXRay.express.closeSegment());
 
