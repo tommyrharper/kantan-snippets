@@ -90,6 +90,22 @@
       {
         "name": "INVOICE_SERVICE_URL",
         "value": "${multiservices_url}"
+      },
+      {
+        "name": "QUOTE_SERVICE_URL",
+        "value": "${multiservices_url}"
+      },
+      {
+        "name": "PUSH_NOTIFICATION_SERVICE_URL",
+        "value": "${multiservices_url}"
+      },
+      {
+        "name": "RECORDS_SERVICE_URL",
+        "value": "${multiservices_url}"
+      },
+      {
+        "name": "SUGGESTIONS_SERVICE_URL",
+        "value": "${multiservices_url}"
       }
     ],
     "secrets": [
